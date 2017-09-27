@@ -1,0 +1,11 @@
+{
+  "name": "stockoverflow",
+  "version": "1.0.0",
+  "description": "Server Side ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raja Chamarthi",
+  "license": "ISC"
+}
