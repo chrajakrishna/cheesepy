@@ -53,6 +53,7 @@ mongoose.connection.on('error', (err) => {
     console.log("Error in Database connection:" + err);
 });
 
+// Added comments to test branch
 //app.use('/api', route);
 
 const port = 3000;
