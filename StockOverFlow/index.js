@@ -9,13 +9,10 @@ var methodOverride = require('method-override');
 var cors = require('cors');
 var _ = require('lodash');
 
-//Test
-//require('./controllers/FileUpload')(app);
+
 
 var app = express();
-// adding middleware
-//app.use(cors());
-//body-parser
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
