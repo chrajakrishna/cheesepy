@@ -29,10 +29,6 @@ const StockSchema = new mongoose.Schema({
         type: String
     }
 
-
-
-
-
 });
 
 module.exports = StockSchema;

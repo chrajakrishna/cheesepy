@@ -13,6 +13,10 @@ var _ = require('lodash');
 
 var app = express();
 
+// CORS
+
+app.use(cors());
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));
