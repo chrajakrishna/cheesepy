@@ -7,7 +7,30 @@ const StockSchema = new mongoose.Schema({
 
     Name: {
         type: String
+    },
+
+    LastSale: {
+        type: Number
+    },
+
+    Sector: {
+        type: String
+    },
+
+    IPOyear: {
+        type: Number
+    },
+
+    Sector: {
+        type: String
+    },
+
+    Industry: {
+        type: String
     }
+
+
+
 
 
 });
