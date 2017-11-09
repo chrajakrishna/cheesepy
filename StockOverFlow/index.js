@@ -59,8 +59,7 @@ mongoose.connection.on('error', (err) => {
 
 // Added comments to test branch
 //app.use('/api', route);
-
-const port = 80;
+const port = 3000;
 app.listen(port, () => {
     console.log("Server started on port: " + port);
 });
