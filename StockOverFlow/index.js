@@ -45,7 +45,7 @@ app.use(function(req, res, next) {
 });
 
 // Reading .properties file
-var properties = PropertiesReader('../../../config.properties');
+var properties = PropertiesReader('../../config.properties');
 var hostname = properties.get('db.hostname');
 var dbport = properties.get('db.port');
 var dbname = properties.get('db.dbname');
