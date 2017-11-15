@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var cors = require('cors');
 var _ = require('lodash');
+var PropertiesReader = require('properties-reader');
 
 
 // Test
@@ -43,9 +44,16 @@ app.use(function(req, res, next) {
     next();
 });
 
+// Reading .properties file
+var properties = PropertiesReader('../../../config.properties');
+var hostname = properties.get('db.hostname');
+var dbport = properties.get('db.port');
+var dbname = properties.get('db.dbname');
+var username = properties.get('db.username');
+var password = properties.get('db.password');
 
 // connect to mongo db
-mongoose.connect('mongodb://cheesepydev:' + encodeURIComponent('dev@123') + '@ds141082.mlab.com:41082/cheesepy');
+mongoose.connect('mongodb://' + username + ':' + encodeURIComponent(password) + hostname + ':' + dbport + '/' + dbname);
 
 //on connection
 mongoose.connection.on('connected', () => {
@@ -68,3 +76,5 @@ app.use('/hello', function(req, res, next) {
     res.send('Hello World!!');
     next();
 });
+
+module.exports.apiKey = properties.get('apikey.key');
