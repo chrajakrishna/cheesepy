@@ -1,3 +1,5 @@
 module.exports = {
-    stock: require('./Stocks')
+    stock: require('./Stocks'),
+    cryptocurrency: require('./Cryptocurrencies'),
+    physicalcurrency: require('./PhysicalCurrencies'),
 }
